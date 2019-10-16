@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView etiqueta,operador1;
     int op1,op2;
     boolean operando=false;
-    String simbolo=null;
+    String simbolo=null; 
 
 
     @Override
