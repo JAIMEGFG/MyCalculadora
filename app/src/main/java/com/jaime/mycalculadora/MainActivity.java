@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView etiqueta,operador1;
     int op1,op2;
     boolean operando=false;
-    String simbolo=null; 
+    String simbolo=null;
 
 
     @Override
@@ -30,6 +30,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void acciones(){
+        ArrayList<View> botones = findViewById(R.id.layPadre).getTouchables();
+        for (View item: botones
+             ) {
+            ((Button) item).setOnClickListener(this);
+        }
         /*btnInicial.setOnClickListener(this);
         btnInicialDos.setOnClickListener(this);
          */
@@ -52,7 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnMult=this.findViewById(R.id.btnMult);
         btnDel=this.findViewById(R.id.btnBorrar);
         btnIgual=this.findViewById(R.id.btnIgual);
-       /* etiqueta=this.findViewById(R.id.etiqueta);
+       etiqueta=this.findViewById(R.id.etiqueta);
+       /*
         operador1=this.findViewById(R.id.operador1);
         ArrayList<View> botones = findViewById(R.id.buttonPanel).getTouchables();
         for (View item: botones) {
